@@ -1,0 +1,16 @@
+#!/bin/bash
+# add and commit all current modules
+
+now=$(date)
+
+cd /home/dev/modules
+for D in *
+do
+	echo "${D}"
+	cd /home/dev/modules/${D}
+	git add .
+	git commit -m "$now"
+	git push
+	echo "${D} git repo updated!"
+	cd /home/dev
+done

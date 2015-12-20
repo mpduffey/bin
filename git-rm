@@ -1,0 +1,7 @@
+#!/bin/bash
+# Delete git and repo
+
+cd /home/dev/modules
+sudo rm -r $1
+curl -X DELETE -u 'mpduffey' https://api.github.com/repos/mpduffey/$1
+echo "$1 deleted!"

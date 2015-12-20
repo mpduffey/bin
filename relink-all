@@ -1,0 +1,14 @@
+#!/bin/bash
+# relink all modules with bower
+
+cd /home/dev/modules
+for D in *
+do
+	echo "${D}"
+	cd /home/dev/modules/${D}
+	bower link
+	cd /home/ng-master
+	bower link "${D}"
+	echo "${D} linked!"
+	cd /home/dev
+done
