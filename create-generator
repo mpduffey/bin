@@ -1,0 +1,8 @@
+#!/bin/bash
+# Create generator
+
+cd /home/dev/generators
+mkdir generator-$1
+cd generator-$1
+npm init
+npm install --save yeoman-generator

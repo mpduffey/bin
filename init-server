@@ -1,0 +1,6 @@
+#!/bin/bash
+# Initialize server
+
+sudo yum install git
+install-node
+sudo npm install -g yo bower sails generator-generator
